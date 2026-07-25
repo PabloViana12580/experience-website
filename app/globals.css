@@ -1,0 +1,176 @@
+@import "../styles/tokens.css";
+@import "../styles/typography.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+  }
+
+  a {
+    @apply underline-offset-4;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .cinematic-drift {
+    animation: cinematic-drift 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes cinematic-drift {
+  from {
+    transform: translate3d(-3%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(3%, 2%, 0) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cinematic-drift {
+    animation: none;
+  }
+}
+
+@layer utilities {
+  .cinematic-scene {
+    animation: scene-rise both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 34%;
+  }
+
+  .scene-frame__horizon,
+  .scene-frame__path,
+  .scene-frame__texture,
+  .scene-frame__table,
+  .scene-frame__sun {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .scene-frame__horizon {
+    left: 10%;
+    right: 10%;
+    top: 42%;
+    height: 1px;
+    background: hsl(var(--border) / 0.72);
+  }
+
+  .scene-frame__sun {
+    right: 18%;
+    top: 18%;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+    background: hsl(var(--takoah-golden) / 0.24);
+    box-shadow: 0 0 80px hsl(var(--takoah-golden) / 0.28);
+  }
+
+  .scene-frame__path {
+    left: 18%;
+    right: 18%;
+    bottom: 12%;
+    height: 38%;
+    border: 1px solid hsl(var(--border) / 0.58);
+    border-top: 0;
+    border-radius: 0 0 9999px 9999px;
+    transform: perspective(16rem) rotateX(62deg);
+    transform-origin: bottom;
+  }
+
+  .scene-frame__texture {
+    inset: 22% 16% auto auto;
+    width: 30%;
+    height: 46%;
+    border-left: 1px solid hsl(var(--border) / 0.62);
+    border-right: 1px solid hsl(var(--border) / 0.42);
+    background: repeating-linear-gradient(90deg, hsl(var(--border) / 0.2) 0 1px, transparent 1px 18px);
+  }
+
+  .scene-frame__table {
+    left: 24%;
+    right: 24%;
+    bottom: 21%;
+    height: 17%;
+    border: 1px solid hsl(var(--border) / 0.65);
+    border-radius: 9999px;
+    background: hsl(var(--background) / 0.2);
+  }
+
+  .scene-frame--ocean .scene-frame__path,
+  .scene-frame--ocean .scene-frame__texture,
+  .scene-frame--ocean .scene-frame__table,
+  .scene-frame--beach .scene-frame__texture,
+  .scene-frame--surf .scene-frame__texture,
+  .scene-frame--palms .scene-frame__table,
+  .scene-frame--bamboo .scene-frame__sun,
+  .scene-frame--bamboo .scene-frame__table,
+  .scene-frame--takoah .scene-frame__horizon,
+  .scene-frame--golden .scene-frame__texture,
+  .scene-frame--people .scene-frame__horizon,
+  .scene-frame--night .scene-frame__path {
+    opacity: 0;
+  }
+
+  .scene-frame--surf .scene-frame__horizon,
+  .scene-frame--palms .scene-frame__texture,
+  .scene-frame--bamboo .scene-frame__texture,
+  .scene-frame--takoah .scene-frame__table,
+  .scene-frame--golden .scene-frame__table,
+  .scene-frame--people .scene-frame__table,
+  .scene-frame--night .scene-frame__table {
+    opacity: 1;
+  }
+
+  .scene-frame--palms .scene-frame__texture {
+    inset: 14% 8% auto auto;
+    height: 62%;
+    width: 52%;
+    transform: skewX(-12deg);
+  }
+
+  .scene-frame--night .scene-frame__sun {
+    top: 64%;
+    right: 46%;
+    width: 4rem;
+    height: 4rem;
+    background: hsl(var(--takoah-candle) / 0.22);
+  }
+}
+
+@keyframes scene-rise {
+  from {
+    opacity: 0.72;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-scene {
+    animation: none;
+  }
+}

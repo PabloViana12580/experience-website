@@ -1,2 +1,3 @@
-# experience-website
-A website that has experience as the primary driver of design. 
+# Takoah Experience Website
+
+Project foundation for the Takoah website, built with Next.js, React, TypeScript, Tailwind CSS, and shadcn/ui conventions.
