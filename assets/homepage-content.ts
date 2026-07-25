@@ -1,26 +1,4 @@
-export type SceneFrameKind =
-  | "ocean"
-  | "beach"
-  | "surf"
-  | "palms"
-  | "bamboo"
-  | "takoah"
-  | "golden"
-  | "people"
-  | "night";
-
-export type HomepageScene = {
-  id: string;
-  time: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  sensoryCue: string;
-  palette: string;
-  frameKind: SceneFrameKind;
-};
-
-export const homepageScenes: readonly HomepageScene[] = [
+export const homepageScenes = [
   {
     id: "experience",
     time: "01",
@@ -120,7 +98,9 @@ export const homepageScenes: readonly HomepageScene[] = [
     palette: "from-takoah-night/35 via-takoah-wood/25 to-background",
     frameKind: "night",
   },
-];
+] as const;
+
+export type HomepageScene = (typeof homepageScenes)[number];
 
 export const homepageVisit = {
   id: "visit",
