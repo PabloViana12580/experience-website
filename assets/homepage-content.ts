@@ -1,4 +1,15 @@
-export const homepageScenes = [
+export interface HomepageScene {
+  id: string;
+  time: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  sensoryCue: string;
+  palette: string;
+  frameKind: string;
+}
+
+export const homepageScenes: HomepageScene[] = [
   {
     id: "experience",
     time: "01",
@@ -98,9 +109,7 @@ export const homepageScenes = [
     palette: "from-takoah-night/35 via-takoah-wood/25 to-background",
     frameKind: "night",
   },
-] as const;
-
-export type HomepageScene = (typeof homepageScenes)[number];
+];
 
 export const homepageVisit = {
   id: "visit",
