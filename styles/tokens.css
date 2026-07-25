@@ -1,0 +1,32 @@
+:root {
+  --background: 42 47% 94%;
+  --foreground: 218 31% 13%;
+  --card: 40 43% 96%;
+  --card-foreground: 218 31% 13%;
+  --popover: 40 43% 96%;
+  --popover-foreground: 218 31% 13%;
+  --primary: 18 55% 30%;
+  --primary-foreground: 42 47% 94%;
+  --secondary: 37 43% 83%;
+  --secondary-foreground: 218 31% 13%;
+  --muted: 38 31% 87%;
+  --muted-foreground: 218 13% 38%;
+  --accent: 33 83% 60%;
+  --accent-foreground: 218 31% 13%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 42 47% 94%;
+  --border: 34 27% 78%;
+  --input: 34 27% 78%;
+  --ring: 24 67% 46%;
+  --radius: 1rem;
+
+  --takoah-pacific: 201 47% 43%;
+  --takoah-sand: 42 47% 84%;
+  --takoah-palm: 96 22% 27%;
+  --takoah-golden: 36 86% 64%;
+  --takoah-sunset: 15 72% 58%;
+  --takoah-wood: 25 43% 32%;
+  --takoah-tequila: 40 78% 56%;
+  --takoah-night: 222 36% 14%;
+  --takoah-candle: 33 100% 78%;
+}
