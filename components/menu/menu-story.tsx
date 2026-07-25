@@ -1,9 +1,11 @@
 import Image from "next/image";
 
-import type { MenuStory as MenuStoryContent } from "@/assets/menu-content";
+import type { menuStories } from "@/assets/menu-content";
 import { editorialBlurDataUrl } from "@/lib/image";
 
-type MenuStoryProps = MenuStoryContent & {
+type MenuStory = (typeof menuStories)[number];
+
+type MenuStoryProps = MenuStory & {
   index: number;
 };
 

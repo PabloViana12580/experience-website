@@ -1,14 +1,3 @@
-export type VisitAction = {
-  label: string;
-  description: string;
-  href: string;
-};
-
-export type ArrivalNote = {
-  title: string;
-  text: string;
-};
-
 export const visitIntro = {
   eyebrow: "Visit us",
   title: "Find the warm lights on the main street of El Paredón.",
@@ -16,7 +5,7 @@ export const visitIntro = {
     "Open a map, send a message, or walk in from the beach. Everything points toward the table.",
 } as const;
 
-export const visitLinks: readonly VisitAction[] = [
+export const visitLinks = [
   {
     label: "Google Maps",
     description: "Open Takoah in Google Maps",
@@ -37,9 +26,9 @@ export const visitLinks: readonly VisitAction[] = [
     description: "See what tonight looks like",
     href: "https://www.instagram.com/takoahparedon/",
   },
-];
+] as const;
 
-export const arrivalNotes: readonly ArrivalNote[] = [
+export const arrivalNotes = [
   {
     title: "Tell your driver",
     text: "Takoah, El Paredón — main street, close to the beach-town evening flow.",
@@ -52,4 +41,4 @@ export const arrivalNotes: readonly ArrivalNote[] = [
     title: "If you are nearby",
     text: "Walk from the beach, follow the warm bamboo-and-wood feeling, and look for the Takoah marker.",
   },
-];
+] as const;

@@ -1,16 +1,3 @@
-export type MenuStoryImage = {
-  src: string;
-  alt: string;
-};
-
-export type MenuStory = {
-  id: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  image: MenuStoryImage;
-};
-
 export const menuIntro = {
   eyebrow: "Menu",
   title: "Not a list. A table by the Pacific.",
@@ -18,7 +5,7 @@ export const menuIntro = {
     "A few confident things, served slowly: warm tortillas, cold drinks, shared plates, and the evening close enough to touch.",
 } as const;
 
-export const menuStories: readonly MenuStory[] = [
+export const menuStories = [
   {
     id: "first-bite",
     eyebrow: "First bite",
@@ -49,7 +36,7 @@ export const menuStories: readonly MenuStory[] = [
       alt: "Friends sharing food and drinks around a restaurant table",
     },
   },
-];
+] as const;
 
 export const menuHighlights = [
   "Warm tortillas",

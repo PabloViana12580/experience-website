@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-import type { VisitAction } from "@/assets/visit-content";
+import type { visitLinks } from "@/assets/visit-content";
+
+type VisitAction = (typeof visitLinks)[number];
 
 export function VisitActionCard({ label, description, href }: VisitAction) {
   return (
