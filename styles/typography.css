@@ -1,0 +1,14 @@
+:root {
+  --font-sans: "Inter";
+  --font-display: "Inter";
+}
+
+body {
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: hsl(var(--takoah-golden) / 0.35);
+  color: hsl(var(--foreground));
+}

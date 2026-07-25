@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Handcrafted illustrated map of El Paredón highlighting Takoah</title>
+  <desc id="desc">A warm illustrated beach-town map showing the Pacific Ocean, black sand beach, palm path, main street, mangroves, and a taco-shaped marker for Takoah.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7edd8"/>
+      <stop offset="1" stop-color="#ead0a3"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#4c9bb2"/>
+      <stop offset="1" stop-color="#267086"/>
+    </linearGradient>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="12" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#5b311f" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1000" rx="48" fill="url(#paper)"/>
+  <g opacity="0.12">
+    <path d="M96 132 C280 84 438 160 604 112 C768 66 894 126 1086 94 C1192 76 1288 98 1340 118" fill="none" stroke="#5b311f" stroke-width="2"/>
+    <path d="M54 842 C280 784 418 876 656 820 C890 766 1054 870 1328 782" fill="none" stroke="#5b311f" stroke-width="2"/>
+  </g>
+
+  <path d="M0 0 H1400 V248 C1226 282 1074 276 900 250 C690 219 514 258 326 242 C198 231 88 198 0 218 Z" fill="url(#ocean)" filter="url(#rough)"/>
+  <g fill="none" stroke="#d7f0ee" stroke-linecap="round" opacity="0.74">
+    <path d="M66 112 C246 76 416 138 586 104 C728 76 870 104 1018 126 C1140 144 1238 124 1334 98" stroke-width="8"/>
+    <path d="M18 178 C214 142 386 204 588 164 C760 130 900 172 1058 188 C1198 202 1288 178 1382 160" stroke-width="5"/>
+  </g>
+
+  <path d="M0 246 C166 292 310 286 508 268 C700 250 816 286 1014 306 C1166 320 1284 292 1400 272 V376 C1194 424 1034 394 872 370 C660 338 510 374 298 354 C174 342 82 318 0 334 Z" fill="#4a4038" opacity="0.86" filter="url(#rough)"/>
+  <path d="M0 360 C196 404 390 390 572 372 C760 354 918 410 1118 416 C1236 420 1326 398 1400 382 V1000 H0 Z" fill="#e7c98d"/>
+
+  <path d="M104 820 C248 694 336 614 474 562 C610 510 730 518 864 442 C994 368 1112 340 1280 318" fill="none" stroke="#8b5b34" stroke-width="26" stroke-linecap="round" opacity="0.34"/>
+  <path d="M104 820 C248 694 336 614 474 562 C610 510 730 518 864 442 C994 368 1112 340 1280 318" fill="none" stroke="#f6e2b9" stroke-width="12" stroke-linecap="round" stroke-dasharray="38 32"/>
+
+  <g fill="#2f5b38" opacity="0.88">
+    <path d="M324 470 c-44 -40 -88 -28 -132 26 c70 -10 116 0 132 -26Z"/>
+    <path d="M356 506 c-50 -8 -82 16 -96 72 c54 -38 96 -48 96 -72Z"/>
+    <path d="M960 318 c-30 -58 -82 -70 -154 -36 c70 22 118 34 154 36Z"/>
+    <path d="M1002 374 c-58 -12 -104 14 -138 78 c66 -42 112 -58 138 -78Z"/>
+    <path d="M654 612 c-56 -18 -104 0 -144 54 c76 -28 126 -34 144 -54Z"/>
+  </g>
+
+  <g fill="#75523b" opacity="0.8">
+    <rect x="476" y="520" width="118" height="72" rx="14" transform="rotate(-12 535 556)"/>
+    <rect x="704" y="444" width="136" height="84" rx="16" transform="rotate(-18 772 486)"/>
+    <rect x="878" y="548" width="146" height="88" rx="18" transform="rotate(10 951 592)"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M706 310 C786 222 942 236 1008 336 C1064 420 1014 528 878 558 C740 590 628 498 642 398 C646 362 668 334 706 310Z" fill="#f5c85f" stroke="#5b311f" stroke-width="10"/>
+    <path d="M714 348 C782 288 906 296 958 360" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="790" cy="408" r="18" fill="#df5e3f"/>
+    <circle cx="862" cy="378" r="16" fill="#2f5b38"/>
+    <circle cx="914" cy="430" r="14" fill="#df5e3f"/>
+    <text x="825" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="800" fill="#5b311f">T</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" fill="#5b311f">
+    <text x="92" y="154" font-size="42" font-weight="700" letter-spacing="5">PACIFIC OCEAN</text>
+    <text x="86" y="328" font-size="28" font-weight="700" letter-spacing="4" fill="#f5e4cf">BLACK SAND BEACH</text>
+    <text x="938" y="720" font-size="34" font-weight="800">Takoah</text>
+    <text x="938" y="760" font-size="22" letter-spacing="3">MAIN STREET</text>
+    <text x="92" y="890" font-size="26" letter-spacing="4">MANGROVES</text>
+    <text x="1010" y="278" font-size="22" letter-spacing="3">SURF</text>
+  </g>
+
+  <path d="M900 676 C840 614 826 554 850 500" fill="none" stroke="#df5e3f" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <circle cx="902" cy="678" r="8" fill="#df5e3f"/>
+</svg>
